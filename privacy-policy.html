@@ -1,0 +1,398 @@
+<title>OMNICHANNEL Privacy Policy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root {
+    --ink: #161b26;
+    --ink-soft: #3a4152;
+    --muted: #5b6472;
+    --paper: #f6f7fa;
+    --surface: #ffffff;
+    --border: #dde1e8;
+    --accent: #3452e0;
+    --accent-ink: #1f34a8;
+    --accent-soft: #eaedfb;
+    --code-bg: #eef0f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #e8eaf0;
+      --ink-soft: #c7cbd6;
+      --muted: #9199aa;
+      --paper: #12141c;
+      --surface: #171a24;
+      --border: #2a2e3a;
+      --accent: #8b9bff;
+      --accent-ink: #aab4ff;
+      --accent-soft: #1c2038;
+      --code-bg: #1d212c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #e8eaf0;
+    --ink-soft: #c7cbd6;
+    --muted: #9199aa;
+    --paper: #12141c;
+    --surface: #171a24;
+    --border: #2a2e3a;
+    --accent: #8b9bff;
+    --accent-ink: #aab4ff;
+    --accent-soft: #1c2038;
+    --code-bg: #1d212c;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.65;
+  }
+  a { color: var(--accent-ink); text-decoration-color: color-mix(in srgb, var(--accent-ink) 40%, transparent); }
+  a:hover { text-decoration-color: var(--accent-ink); }
+
+  .shell {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+    display: grid;
+    grid-template-columns: 220px minmax(0, 700px);
+    gap: 64px;
+    justify-content: center;
+  }
+
+  .masthead {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 28px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .masthead .brand {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+  .masthead .brand span { color: var(--muted); font-weight: 400; }
+  .masthead nav a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-left: 20px;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .masthead nav a:hover { color: var(--accent-ink); }
+  .masthead nav a.current { color: var(--accent-ink); }
+
+  aside.toc {
+    position: sticky;
+    top: 40px;
+    align-self: start;
+    font-size: 0.84rem;
+  }
+  aside.toc .toc-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  aside.toc ol { list-style: none; margin: 0; padding: 0; counter-reset: toc; }
+  aside.toc li { counter-increment: toc; margin-bottom: 9px; }
+  aside.toc a {
+    display: flex;
+    gap: 8px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    line-height: 1.4;
+  }
+  aside.toc a::before {
+    content: counter(toc, decimal-leading-zero);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+    flex-shrink: 0;
+    padding-top: 0.1em;
+  }
+  aside.toc a:hover { color: var(--accent-ink); }
+
+  main { min-width: 0; }
+
+  .doc-head h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.9rem, 1.5rem + 1.6vw, 2.6rem);
+    line-height: 1.15;
+    margin: 0 0 18px;
+    text-wrap: balance;
+  }
+  .doc-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 22px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+    padding: 14px 0 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+    font-variant-numeric: tabular-nums;
+  }
+  .doc-meta strong { color: var(--ink-soft); font-weight: 500; }
+
+  .lede {
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    max-width: 62ch;
+    margin-bottom: 8px;
+  }
+
+  section.clause { margin: 44px 0; scroll-margin-top: 32px; }
+  section.clause h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 0 0 14px;
+  }
+  section.clause h2 .num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: var(--accent-ink);
+  }
+  section.clause p, section.clause li { max-width: 66ch; color: var(--ink-soft); }
+  section.clause ul { padding-left: 1.2em; margin: 10px 0; }
+  section.clause li { margin-bottom: 6px; }
+  section.clause h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 20px 0 8px;
+    color: var(--ink);
+  }
+
+  .callout {
+    background: var(--accent-soft);
+    border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--border));
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 18px 0;
+    max-width: 66ch;
+  }
+  .callout p { margin: 0; color: var(--ink-soft); }
+  .callout .label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  code {
+    font-family: 'IBM Plex Mono', monospace;
+    background: var(--code-bg);
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  table.rights {
+    width: 100%;
+    max-width: 66ch;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.92rem;
+  }
+  table.rights th, table.rights td {
+    text-align: left;
+    padding: 9px 14px 9px 0;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  table.rights th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  footer.doc-footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  footer.doc-footer a { color: var(--accent-ink); }
+
+  @media (max-width: 860px) {
+    .shell { grid-template-columns: 1fr; }
+    aside.toc { position: static; padding-bottom: 12px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
+  }
+</style>
+
+<div class="shell">
+  <div class="masthead">
+    <div class="brand">OMNICHANNEL <span>— Raid Layer Webhost Pvt Ltd</span></div>
+    <nav>
+      <a href="#" class="current">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+    </nav>
+  </div>
+
+  <aside class="toc">
+    <div class="toc-label">On this page</div>
+    <ol>
+      <li><a href="#scope">Scope &amp; who we are</a></li>
+      <li><a href="#collect">Information we collect</a></li>
+      <li><a href="#channels">Connected messaging channels</a></li>
+      <li><a href="#use">How we use information</a></li>
+      <li><a href="#sharing">Sharing &amp; disclosure</a></li>
+      <li><a href="#retention">Retention</a></li>
+      <li><a href="#deletion">Data deletion</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </aside>
+
+  <main>
+    <div class="doc-head">
+      <h1>Privacy Policy</h1>
+      <p class="lede">How OMNICHANNEL collects, uses, and protects information when a business connects its Messenger, Instagram, WhatsApp, and other channels into one shared inbox.</p>
+    </div>
+    <div class="doc-meta">
+      <span><strong>Effective</strong> 10 Sept 2026</span>
+      <span><strong>Version</strong> 1.0</span>
+      <span><strong>Operator</strong> Raid Layer Webhost Pvt Ltd</span>
+      <span><strong>Contact</strong> v91863126@gmail.com</span>
+    </div>
+
+    <section class="clause" id="scope">
+      <h2><span class="num">01</span> Scope &amp; who we are</h2>
+      <p>This policy covers OMNICHANNEL, a customer-messaging platform operated by Raid Layer Webhost Pvt Ltd ("we", "us", "our") that lets a business team send and receive messages across Facebook Messenger, Instagram, WhatsApp, email, and web chat from a single shared inbox.</p>
+      <p>This policy applies to the businesses that use OMNICHANNEL ("customers") and, through them, to the end users who message a customer's connected channels ("contacts"). It does not cover third-party platforms — Meta, Google, and others each publish their own privacy terms for the accounts you hold with them directly.</p>
+    </section>
+
+    <section class="clause" id="collect">
+      <h2><span class="num">02</span> Information we collect</h2>
+      <h3>From a customer account</h3>
+      <ul>
+        <li>Account and billing details: name, email, company name, plan and billing status.</li>
+        <li>Team data: agent names, roles, and login activity within the workspace.</li>
+        <li>Channel credentials: OAuth tokens and identifiers issued by Meta and other providers when a customer connects a Page, Instagram account, WhatsApp Business Account, or mailbox. Tokens are stored encrypted at rest and are never shown in plain text after entry.</li>
+      </ul>
+      <h3>From a contact (an end user messaging a connected channel)</h3>
+      <ul>
+        <li>Identifiers the channel provides: a Page-scoped or Instagram-scoped user ID, or a phone number for WhatsApp.</li>
+        <li>Public profile fields the channel makes available: display name and profile photo.</li>
+        <li>The content of messages sent through a connected channel — text, attachments, reactions, and delivery/read status — for as long as needed to display and manage the conversation.</li>
+      </ul>
+    </section>
+
+    <section class="clause" id="channels">
+      <h2><span class="num">03</span> Connected messaging channels</h2>
+      <p>When a customer connects a channel, OMNICHANNEL requests only the permissions that channel to function as a shared inbox:</p>
+      <ul>
+        <li><strong>Facebook Messenger</strong> — <code>pages_messaging</code>, to send and receive messages on behalf of a Page the customer administers.</li>
+        <li><strong>Instagram</strong> — <code>instagram_business_basic</code> and <code>instagram_business_manage_messages</code>, to send and receive direct messages on behalf of an Instagram professional account the customer administers.</li>
+        <li><strong>WhatsApp</strong> — <code>whatsapp_business_messaging</code> and <code>whatsapp_business_management</code>, to send and receive messages through a WhatsApp Business Account the customer administers.</li>
+      </ul>
+      <p>We do not request access to a customer's or contact's broader social profile, contacts list, or content unrelated to the messaging conversation itself.</p>
+    </section>
+
+    <section class="clause" id="use">
+      <h2><span class="num">04</span> How we use information</h2>
+      <ul>
+        <li>To display conversations in the customer's shared inbox and route them to the right team or agent.</li>
+        <li>To send messages the customer's team composes back to a contact, on the channel the contact originally used.</li>
+        <li>To power optional features the customer enables, such as AI-assisted reply drafting or automation rules, using message content already visible to the customer's team.</li>
+        <li>To maintain the security, availability, and integrity of the service, including detecting abuse of connected channel credentials.</li>
+      </ul>
+      <p>We do not sell information we hold on behalf of customers, and we do not use contact message content to build advertising profiles.</p>
+    </section>
+
+    <section class="clause" id="sharing">
+      <h2><span class="num">05</span> Sharing &amp; disclosure</h2>
+      <p>Information is shared only where necessary to operate the service:</p>
+      <ul>
+        <li>With Meta and other channel providers, strictly to transmit and receive messages through the channel a customer has connected.</li>
+        <li>With infrastructure sub-processors (hosting, database, and object storage providers) who process data solely to run OMNICHANNEL on our behalf.</li>
+        <li>Where required by law, or to protect the rights, safety, or property of OMNICHANNEL, our customers, or the public.</li>
+      </ul>
+    </section>
+
+    <section class="clause" id="retention">
+      <h2><span class="num">06</span> Retention</h2>
+      <p>Conversation and contact data is retained for as long as a customer's account remains active, so their team keeps a working history of every conversation. Channel access tokens are retained only until a customer disconnects the channel or revokes access from the provider's own settings.</p>
+    </section>
+
+    <section class="clause" id="deletion">
+      <h2><span class="num">07</span> Data deletion</h2>
+      <p>A customer can disconnect a channel at any time from their Integrations settings, which revokes and deletes the stored access token immediately.</p>
+      <div class="callout">
+        <span class="label">Requesting deletion</span>
+        <p>To request deletion of a customer's account data, or of a specific contact's message history, email <strong>v91863126@gmail.com</strong> with the workspace name and, for a contact-specific request, the channel and conversation involved. We confirm and complete deletion requests within 30 days.</p>
+      </div>
+      <p>If a contact reaches us through Facebook, Instagram, or WhatsApp and asks that platform to delete their data, we honor the resulting deletion callback from that platform in the same way as a direct request.</p>
+    </section>
+
+    <section class="clause" id="security">
+      <h2><span class="num">08</span> Security</h2>
+      <ul>
+        <li>Channel access tokens are encrypted at rest using envelope encryption; no plaintext token is logged or displayed after initial entry.</li>
+        <li>All traffic to and from OMNICHANNEL is encrypted in transit (HTTPS/TLS).</li>
+        <li>Access to customer data within our own systems is limited to what a role needs to operate or support the service.</li>
+      </ul>
+    </section>
+
+    <section class="clause" id="rights">
+      <h2><span class="num">09</span> Your rights</h2>
+      <table class="rights">
+        <tr><th>You can ask us to</th><th>By</th></tr>
+        <tr><td>See what data we hold about your workspace</td><td>Emailing the contact below</td></tr>
+        <tr><td>Correct inaccurate account details</td><td>Editing them in Settings, or emailing us</td></tr>
+        <tr><td>Delete your account or a contact's history</td><td>Emailing the contact below, or disconnecting a channel yourself</td></tr>
+        <tr><td>Export a copy of your conversation data</td><td>Emailing the contact below</td></tr>
+      </table>
+    </section>
+
+    <section class="clause" id="children">
+      <h2><span class="num">10</span> Children's privacy</h2>
+      <p>OMNICHANNEL is a business tool and is not directed at children. We do not knowingly collect information from children through the service.</p>
+    </section>
+
+    <section class="clause" id="changes">
+      <h2><span class="num">11</span> Changes to this policy</h2>
+      <p>We'll update the version and effective date above when this policy changes, and post the revised text at this same address.</p>
+    </section>
+
+    <section class="clause" id="contact">
+      <h2><span class="num">12</span> Contact</h2>
+      <p>Raid Layer Webhost Pvt Ltd — <a href="mailto:v91863126@gmail.com">v91863126@gmail.com</a></p>
+    </section>
+
+    <footer class="doc-footer">
+      <span>OMNICHANNEL, operated by Raid Layer Webhost Pvt Ltd</span>
+      <a href="terms-of-service.html">Read the Terms of Service →</a>
+    </footer>
+  </main>
+</div>
